@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Maker?</title>
+    <link rel="stylesheet" type="text/css" href="../../public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/jass.css" </head>
+
+<body>
+    <header>
+        <h1>Title Placeholder</h1>
+    </header>
+    <nav class="nav nav-pills">
+        <div class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+        </div>
+        <div class="nav-item">
+            {{#if loggedIn}}
+            <button id="logout" class="btn-no-style justify-content-end">Logout</button>
+            {{else}}
+            <a href="/login">Login</a>
+            {{/if}}
+        </div>
+    </nav>
+
+    <main>
+        {{{body}}}
+    </main>
+    <footer>
+        {{#if loggedIn}}
+        <script src="/js/logout.js"></script>
+        {{/if}}
+    </footer>
+</body>
