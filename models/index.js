@@ -1,5 +1,13 @@
 const User = require('./User');
+const Quiz = require('./Quiz');
 
-//I assume more needs to go in here...
+User.hasMany(Quiz, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+  });
 
-module.exports = { User };
+Quiz.belongsTo(User, {
+    foreignKey: 'user_id'
+  });
+
+module.exports = { User, Quiz };
