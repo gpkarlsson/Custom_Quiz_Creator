@@ -11,17 +11,21 @@ Quiz.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    quiz_title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    course_subject: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
       defaultValue: DataTypes.NOW,
+    },
+    user_created: {
+    type: DataTypes.BOOLEAN,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -31,13 +35,12 @@ Quiz.init(
       },
     },
   },
+
   {
     sequelize,
-    timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: 'quiz',
-  }
-);
+  });
 
 module.exports = Quiz;
