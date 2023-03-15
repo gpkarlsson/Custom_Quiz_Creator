@@ -32,10 +32,10 @@ function displayTime() {
 </header>
 
 <main>
-    <span> </span>
-    <title class="mt-4 text-centered"> {{Quizquestion}}</title>
-    <span> </span>
+    <title class="m-4 p-4 text-centered"> {{Quizquestion}}</title>
+
     {{quizanswers}}
     
-    <!--need help with deciding how to set this part up. -->
+    <!-- submit button checks answer and sends user to next question -->
+    <button id="submit-answer" class="btn btn-primary" type="submit">Submit Answer</button>
 </main>
