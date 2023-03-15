@@ -9,6 +9,7 @@ const questionData = [
         category: 'geography',
         question: 'What continent is the country Georgia located in?',
         answers: [
+
           { text: 'Europe', correct: true },
           { text: 'Asia', correct: false },
           { text: 'North America', correct: false },
@@ -33,6 +34,7 @@ const questionData = [
           { text: 'Rhode Island', correct: false },
           { text: 'Vermont', correct: false },
           { text: 'Colorado', correct: false },
+
         ]
       },
       {

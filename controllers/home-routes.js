@@ -48,4 +48,22 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+router.get('/quiz', withAuth, async (req, res) => {
+  try {
+    const userData = await User.findAll({
+      attributes: { exclude: ['password'] },
+      order: [['name', 'ASC']],
+    });
+
+    const users = userData.map((project) => project.get({ plain: true }));
+
+    res.render('quiz', {
+      users,
+      loggedIn: req.session.loggedIn,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
