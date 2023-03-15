@@ -8,37 +8,54 @@ const questionData = [
       {
         category: 'geography',
         question: 'What continent is the country Georgia located in?',
-        answer: 'Europe'
+        answers: [
+          { text: 'Europe', correct: true},
+          { text: 'Asia', correct: false},
+          { text: 'North America', correct: false},
+          { text: 'South America', correct: false}
+        ]
       },
       {
         category: 'geography',
         question: 'What is the largest state by area in the US',
-        answer: 'Alaska'
+        answers: [
+          {text: 'Minnesota', correct: false},
+          {text: 'Maine', correct: false},
+          {text: 'Alaska', correct: true},
+          {text: 'Texas', correct: false}
+        ]
       },
       {
         category: 'geography',
         question: 'What is the smallest state by area in the US?',
-        answer: 'Rhode Island'
+        answer: [
+          {text: 'New Hampshire', correct: false},
+          {text: 'Rhode Island', correct: false},
+          {text: 'Vermont', correct: false},
+          {text: 'Colorado', correct: false},
+        ]
       },
       {
         category: 'geography',
         question: 'What state borders Wisconsin to the south?',
-        answer: 'Rhode Island'
+        answers: [
+          {text: 'Illinois', correct: true},
+          {text: 'South Dakota', correct: false},
+          {text: 'New Mexico', correct: false},
+          {text: 'Washington', correct: false},
+        ] 
       },
-      'What is the largest state by area in the US?',
       {
         category: 'geography',
         question: 'What country borders the US to the North?',
-        answer: 'Canada'
+        answers: [
+          {text: 'Argentina', correct: false},
+          {text: 'Canada', correct: true},
+          {text: 'Mexico', correct: false},
+          {text: 'Sweden', correct: false}
+        ]
       }
     ],
-    // answers: [
-    //   'Europe',
-    //   'Alaska',
-    //   'Rhode Island',
-    //   'Illinois',
-    //   'Canada'
-    // ]
   },
   {
     name: 'Math Quiz',
@@ -80,22 +97,5 @@ const questionData = [
       'How many degrees must all angles in a triangle add up to?'
 
     ],
-    // answers: [
-    //   '4',
-    //   '2',
-    //   'x = 3',
-    //   '3000',
-    //   '3.14',
-    //   'One and themselves',
-    //   '180 degrees'
-    // ]
   },
-  // {
-  //   name: 'JavaScript Quiz',
-  //   questions: [
-  //     'What does DOM stand for?',
-  //     'What does NPM stand for?',
-  //     ''
-  //   ]
-  // }
 ]
