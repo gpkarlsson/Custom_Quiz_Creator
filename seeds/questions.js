@@ -180,27 +180,52 @@ const questionData = [
       {
         category: 'language arts',
         question: 'A word that shares the same meaning as another word is known as a',
-        answer: 'synonym'
+        answers: [
+          { text: 'synonym', correct: true},
+          { text: 'verb', correct: false},
+          { text: 'noun', correct: false},
+          { text: 'article', correct: false}
+        ]
       },
       {
         category: 'language arts',
         question: 'The name of a person, place, or thing',
-        answer: 'noun'
+        answers: [
+          { text: 'noun', correct: true},
+          { text: 'verb', correct: false},
+          { text: 'definite article', correct: false},
+          { text: 'indefinite article', correct: false}
+        ]
       },
       {
         category: 'language arts',
         question: 'A word used to describe a noun or pronoun',
-        answer: 'adjective'
+        answers: [
+          { text: 'person', correct: false},
+          { text: 'adjective', correct: true},
+          { text: 'adverb', correct: false},
+          { text: 'pronoun', correct: false}
+        ]
       },
       {
         category: 'language arts',
         question: 'This word is used to join words, phrases, or clauses such as "but and "or"',
-        answer: 'conjunction'
+        answers: [
+          { text: 'conjunction', correct: true},
+          { text: 'noun', correct: false},
+          { text: 'pronoun', correct: false},
+          { text: 'verb', correct: false}
+        ]
       },
       {
         category: 'language arts',
         question: 'Which term indicates a pause, typically between two main clauses, that is more pronounced than that indicated by a comma.',
-        answer: 'semicolon'
+        answers: [
+          { text: 'colon,', correct: false},
+          { text: 'semicolon', correct: true},
+          { text: 'past participle', correct: false},
+          { text: 'adjective', correct: false}
+        ]
       },
     ],
   },
