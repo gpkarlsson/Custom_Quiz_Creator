@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Quiz extends Model {}
+class Quiz extends Model { }
 
 Quiz.init(
   {
@@ -25,7 +25,7 @@ Quiz.init(
       defaultValue: DataTypes.NOW,
     },
     user_created: {
-    type: DataTypes.BOOLEAN,
+      type: DataTypes.BOOLEAN,
     },
     user_id: {
       type: DataTypes.INTEGER,
