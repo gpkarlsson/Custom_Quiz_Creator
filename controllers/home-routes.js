@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Quiz } = require('../models');
+const { User, Quiz, Questions } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -55,6 +55,10 @@ router.get('/quiz', withAuth, async (req, res) => {
     const quizData = await Quiz.findOne({
       where: { name: 'Geography Quiz' }
     });
+    const answerData = await Questions.findOne({
+      where: { options: JSON.stringify(['Europe', 'Asia', 'North America', 'South America']) }
+    });
+    console.log(answerData);
     if (!quizData) {
       res.status(400).json({message: 'quiz not found'});
     }

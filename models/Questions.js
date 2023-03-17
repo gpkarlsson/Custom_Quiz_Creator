@@ -22,12 +22,16 @@ Questions.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'quiz',
+        model: 'user',
         key: 'id',
       },
     },
     questions: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    correctAnswer: {
+      type: DataTypes.BOOLEAN,
       allowNull: false,
 
     }
@@ -37,7 +41,7 @@ Questions.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'quiz',
+    modelName: 'Questions',
   });
 
-module.exports = Quiz;
+module.exports = Questions;

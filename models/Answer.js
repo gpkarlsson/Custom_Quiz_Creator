@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const Quiz = require('./Quiz');
+// const Quiz = require('./Quiz');
 
 class Answer extends Model { }
 
@@ -24,7 +24,7 @@ Answer.init(
         correct_answer: {
             type: DataTypes.BOOLEAN,
             references: {
-                model: "Quiz",
+                model: "Questions",
                 key: "id"
             },
         },

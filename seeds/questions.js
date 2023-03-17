@@ -1,11 +1,34 @@
 const { Quiz } = require('../models');
 
-//TODO: Add questions, figure out what other parameters are needed/how to implement. Do questions and answers need to be combined into one?
 const questionData = [
   {
     name: 'Geography Quiz',
     subject: 'geography',
-    questions: 'question1'
+    questions: 'What continent is the country Georgia located in?',
+    options: JSON.stringify(['Europe', 'Asia', 'North America', 'South America']),
+    correctAnswer: 'Europe'
+  },
+  {
+    name: 'Science Quiz',
+    subject: 'science',
+    question: 'What is the smallest particle in the universe?',
+    options: JSON.stringify(['Atom', 'Electron', 'Neutron', 'Quark']),
+    correctAnswer: 'Quark',
+  },
+  {
+    name: 'History Quiz',
+    subject: 'history',
+    question: 'What year did World War II end?',
+    options: JSON.stringify(['1939', '1943', '1945', '1951']),
+    correctAnswer: '1945',
+  },
+  {
+    name: 'Literature Quiz',
+    subject: 'literature',
+    question: 'Who wrote the novel "To Kill a Mockingbird"?',
+    options: JSON.stringify(['Harper Lee', 'John Steinbeck', 'J.D. Salinger', 'Ernest Hemingway']),
+    correctAnswer: 'Harper Lee',
+  }
 //[
 //       {
 //         category: 'geography',
@@ -59,7 +82,7 @@ const questionData = [
 //         ]
 //       }
 // ]
-  }
+  //}
   // {
   //   name: 'Math Quiz',
   //   subject: 'math',
@@ -237,4 +260,4 @@ const questionData = [
 
 const seedQuestion = () => Quiz.bulkCreate(questionData);
 
-module.exports = seedQuestion;
+module.exports = seedQuestion; 
