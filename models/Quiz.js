@@ -11,11 +11,11 @@ Quiz.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    quiz_title: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    course_subject: {
+    subject: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -34,6 +34,11 @@ Quiz.init(
         key: 'id',
       },
     },
+    questions: {
+      type: DataTypes.STRING,
+      allowNull: false,
+
+    }
   },
 
   {
