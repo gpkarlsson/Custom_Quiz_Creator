@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Quiz } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -10,7 +10,7 @@ router.get('/', withAuth, async (req, res) => {
       });
   
       const users = userData.map((project) => project.get({ plain: true }));
-  
+      console.log(await req.session.loggedIn)
       res.render('home', {
         users,
         loggedIn: req.session.loggedIn,
@@ -21,16 +21,17 @@ router.get('/', withAuth, async (req, res) => {
   });
 
   router.get('/Takequiz', withAuth, async (req, res) => {
+    console.log('test')
     try {
-      const userData = await User.findAll({
-        attributes: { exclude: ['password'] },
-        order: [['name', 'ASC']],
-      });
+      // const userData = await User.findAll({
+      //   attributes: { exclude: ['password'] },
+      //   order: [['name', 'ASC']],
+      // });
   
-      const users = userData.map((project) => project.get({ plain: true }));
-  
+      // const users = userData.map((project) => project.get({ plain: true }));
+      console.log(await req.session.loggedIn)
       res.render('Takequiz', {
-        users,
+        // users,
         loggedIn: req.session.loggedIn,
       });
     } catch (err) {
@@ -49,19 +50,23 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/quiz', withAuth, async (req, res) => {
+ console.log('below/quiz')
   try {
-    const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
+    const quizData = await Quiz.findOne({
+      where: { name: 'Geography Quiz' }
     });
-
-    const users = userData.map((project) => project.get({ plain: true }));
-
+    if (!quizData) {
+      res.status(400).json({message: 'quiz not found'});
+    }
+    const quiz = quizData.dataValues.questions
+    console.log(quizData)
+    
     res.render('quiz', {
-      users,
+      quiz,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
+    console.log('here error')
     res.status(500).json(err);
   }
 });
