@@ -9,7 +9,6 @@ const questionData = [
         category: 'geography',
         question: 'What continent is the country Georgia located in?',
         answers: [
-
           { text: 'Europe', correct: true },
           { text: 'Asia', correct: false },
           { text: 'North America', correct: false },
@@ -230,3 +229,7 @@ const questionData = [
     ],
   },
 ]
+
+const seedQuestion = () => Quiz.bulkCreate(questionData);
+
+module.exports = seedQuestion;

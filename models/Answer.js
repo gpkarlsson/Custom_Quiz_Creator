@@ -30,8 +30,6 @@ Answer.init(
         },
     },
 
-
-
     {
         sequelize,
         freezeTableName: true,
