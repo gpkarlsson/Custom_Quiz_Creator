@@ -37,8 +37,11 @@ Quiz.init(
     questions: {
       type: DataTypes.STRING,
       allowNull: false,
-
-    }
+    },
+    options: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   },
 
   {
