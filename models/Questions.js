@@ -16,26 +16,19 @@ Questions.init(
       allowNull: false,
     },
       answers:{
-      type: DataTypes.stringify,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     cAnswers: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'quiz',
-        key: 'id',
-      },
-    },},
-    
+  },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'quiz',
+    modelName: 'questions',
   });
 
-module.exports = Quiz;
+module.exports = Questions;

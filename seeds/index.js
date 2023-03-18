@@ -1,5 +1,5 @@
 const sequelize = require('../config/connection');
-const seedGeoQuestions = require('./geoquestions')
+const seedGeoQuestions = require('./geoquestions');
 
 //Seed Answers and Questions
 const seedAll = async () => {
