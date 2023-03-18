@@ -10,7 +10,7 @@ const questions =
         "North America",
         "South America"
       ],
-      c_Answers: 0
+      cAnswer: 0
     },
     {
       question: "What is the largest state by area in the US",
@@ -20,7 +20,7 @@ const questions =
         "Alaska",
         "Texas"
     ],
-      c_Answers: 2
+      cAnswer: 2
     },
     {
       question: "What is the smallest state by area in the US?",
@@ -30,7 +30,7 @@ const questions =
         "Vermont",
         "Colorado"
     ],
-      c_Answers: 1
+      cAnswer: 1
     },
     {
       question: "What state borders Wisconsin to the south?",
@@ -40,7 +40,7 @@ const questions =
         "New Mexico",
         "Washington"
       ],
-      c_Answers: 1
+      cAnswer: 1
     },
     {
       question: "What country borders the US to the North?",

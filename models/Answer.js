@@ -1,10 +1,10 @@
-//const { Model, DataTypes } = require('sequelize');
-//const sequelize = require('../config/connection');
-//const Quiz = require('./Quiz');
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-//class Answer extends Model { }
 
-//Answer.init(
+class Answer extends Model { }
+
+Answer.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -12,29 +12,16 @@
             primaryKey: true,
             autoIncrement: true,
         },
-        quiz_title: {
+        rAnswer: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        date_created: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            defaultValue: DataTypes.NOW,
-        },
-        correct_answer: {
-            type: DataTypes.BOOLEAN,
-            references: {
-                model: "Quiz",
-                key: "id"
-            },
-        },
     },
-
     {
         sequelize,
-        freezeTableName: true,
+        freezeTableName: false,
         underscored: true,
-        modelName: 'quiz',
+        modelName: 'answer',
     });
 
-//module.exports = Answer;
+module.exports = Answer;

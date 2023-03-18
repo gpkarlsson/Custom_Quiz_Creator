@@ -1,7 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Questions extends Model {}
+class Questions extends Model { }
 
 //
 
@@ -17,13 +17,13 @@ Questions.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-      answers:{
-      type: DataTypes.STRING,
-      allowNull: false,
+    answers: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
+      defaultValue: [],
     },
     c_Answers: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      defaultValue: [],
     },
   },
   {
