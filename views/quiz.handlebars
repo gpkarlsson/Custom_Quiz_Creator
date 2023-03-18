@@ -2,16 +2,26 @@
   <div id="box" class="p-4 m-4 container">
     <h2 class="mb-4 pb-4 text-center"> Quiz Time!</h2>
     <div>
-      <h3 class="my-4 text-center"> Category: </h3>
-
-      <p id="questionContainer">{{quiz}}</p>
-
-      {{!-- {{answer}} --}}
-
+      <h3 class="my-4 text-center"> Category: Geography </h3>
+      <h4 class="text-center"> Five questions</h4>
+      {{#each questions}}
+      <p id="question">{{question}}</p>
+      <ul>
+        {{#each answers}}
+        <li id="answers">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+            </label>
+          </div>
+        </li>
+        {{/each}}
+      </ul>
       <!-- submit button checks answer and sends user to next question -->
       <div class="d-flex justify-content-center">
-        <button id="submit-answer" class="btn btn-primary m-4" type="submit">Submit Answer</button>
+        <button id="submit" class="btn btn-primary m-4" type="submit">Submit Answer</button>
       </div>
     </div>
+    {{/each}}
   </div>
 </main>

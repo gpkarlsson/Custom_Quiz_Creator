@@ -1,10 +1,10 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
-const Quiz = require('./Quiz');
+//const { Model, DataTypes } = require('sequelize');
+//const sequelize = require('../config/connection');
+//const Quiz = require('./Quiz');
 
-class Answer extends Model { }
+//class Answer extends Model { }
 
-Answer.init(
+//Answer.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -37,4 +37,4 @@ Answer.init(
         modelName: 'quiz',
     });
 
-module.exports = Answer;
+//module.exports = Answer;

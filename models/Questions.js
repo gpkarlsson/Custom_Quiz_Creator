@@ -11,12 +11,16 @@ Questions.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    question: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    subject: {
-      type: DataTypes.STRING,
+      answers:{
+      type: DataTypes.stringify,
+      allowNull: false,
+    },
+    cAnswers: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     },
     user_id: {
@@ -25,14 +29,8 @@ Questions.init(
         model: 'quiz',
         key: 'id',
       },
-    },
-    questions: {
-      type: DataTypes.STRING,
-      allowNull: false,
-
-    }
-  },
-
+    },},
+    
   {
     sequelize,
     freezeTableName: true,
