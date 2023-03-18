@@ -3,6 +3,7 @@ const sequelize = require('../config/connection');
 
 class Questions extends Model {}
 
+//
 
 Questions.init(
   {
@@ -20,15 +21,14 @@ Questions.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    cAnswers: {
+    c_Answers: {
       type: DataTypes.INTEGER,
-      defaultValue: 0,
       allowNull: false,
     },
   },
   {
     sequelize,
-    freezeTableName: true,
+    freezeTableName: false,
     underscored: true,
     modelName: 'questions',
   });
