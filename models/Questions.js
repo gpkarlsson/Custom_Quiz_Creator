@@ -13,7 +13,7 @@ Questions.init(
       autoIncrement: true,
     },
     question: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
       answers:{
@@ -22,6 +22,7 @@ Questions.init(
     },
     cAnswers: {
       type: DataTypes.INTEGER,
+      defaultValue: 0,
       allowNull: false,
     },
   },
