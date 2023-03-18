@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Questions extends Model { }
-
-//
+class Questions extends Model {}
 
 Questions.init(
   {
@@ -18,12 +16,12 @@ Questions.init(
       allowNull: false,
     },
     answers: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
-      defaultValue: [],
+      type: DataTypes.STRING,
+      allowNull: false,
     },
-    c_Answers: {
-      type: DataTypes.INTEGER,
-      defaultValue: [],
+    correctAnswer: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
@@ -31,6 +29,8 @@ Questions.init(
     freezeTableName: false,
     underscored: true,
     modelName: 'questions',
-  });
+    timestamps: true,
+  }
+);
 
 module.exports = Questions;
