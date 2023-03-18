@@ -1,3 +1,6 @@
+const { Questions } = require('../models');
+
+const questionData = 
 [
 {
   "question": "What continent is the country Georgia located in?",
@@ -48,4 +51,8 @@
     "Sweden"
   ],
   "cAnswer": 1
-}]
+}];
+
+const seedGeoQuestions = () => Questions.bulkCreate(questionData);
+
+module.exports = seedGeoQuestions;
