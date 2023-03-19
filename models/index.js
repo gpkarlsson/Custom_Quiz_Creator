@@ -16,4 +16,4 @@ Quiz.belongsTo(User, {
 //   foreignKey: ''
 // })
 
-module.exports = { User, Questions };
+module.exports = { User, Questions, Quiz };

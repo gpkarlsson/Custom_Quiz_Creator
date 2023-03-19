@@ -1,5 +1,5 @@
 const {Questions, Quiz } = require('./models');
-const 
+// const 
 
 
 const questionS = document.querySelector('#question');
@@ -9,8 +9,8 @@ let currentquestionid = 0;
 let score = 0;
 
 function startQuiz() {
-    for (let i = 0; i < questions.length, i++) {
-        const question = questions[i];
+    for (let i = 0; i < questionS.length, i++;) {
+        const question = questionS[i];
     }
     function questionLoad() {
         currentquestionid.answerS.forEach(answer => {
