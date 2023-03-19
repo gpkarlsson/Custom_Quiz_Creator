@@ -1,4 +1,4 @@
-const questions = require('./questions');
+const {Questions, Quiz } = require('./models');
 const 
 
 
@@ -13,9 +13,9 @@ function startQuiz() {
         const question = questions[i];
     }
     function questionLoad() {
-        currentquestionid.answerS.forEach(answerS => {
+        currentquestionid.answerS.forEach(answer => {
             const btn = doument.addEventListener('click', userAnswer);
-            btn.textContent = answerS;
+            btn.textContent = answer;
         })
     }
 }
