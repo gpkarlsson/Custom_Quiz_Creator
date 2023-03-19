@@ -1,41 +1,35 @@
- <main class="">
+<main class="">
+  <script src="./js/quizLogic.js"></script>
   <div id="box" class="p-4 m-4 container">
     <h2 class="mb-4 pb-4 text-center"> Quiz Time!</h2>
     <div>
       <h3 class="my-4 text-center"> Category: Geography </h3>
+
       <h4 class="text-center"> Five questions</h4>
-      {{#each questions}}
-      <p id="question">{{question}}</p>
 
-        {{#each answers}}
-        <p class="my-4 text-center"></p>
-        {{/each}}
-<div class="mb-3">
-  <label for="answerbox" class="form-label">Answer</label>
-  <input type="text" class="form-control" id="answerbox" placeholder="your answer">
-</div>
+      <p id="question"></p>
 
-       <!-- submit button checks answer and sends user to next question -->
-      <div class="d-flex justify-content-center">
-        <button id="submit" class="btn btn-primary m-4" type="submit">Submit Answer</button>
-      </div>
+      <p id='answers' class="my-4 text-center"></p>
     </div>
-    {{/each}}
-  </div>
-</main> 
 
-{{!-- Test code!! --}}
-  
-   {{#each questions}}
-  <h2>{{question}}</h2>
-  <form>
-    {{#each answers}}
-      <div>
-        <input type="radio" id="{{../id}}-{{@index}}" name="{{../id}}" value="{{@index}}">
-        <label for="{{../id}}-{{@index}}">{{this}}</label>
-      </div>
-    {{/each}}
-  </form>
-{{/each}}
-<script type="application/javascript" src="../js/quizLogic.js"></script>
-<button onclick="submitQuiz()">Submit</button> 
+    <!-- submit button checks answer and sends user to next question -->
+    <div class="d-flex justify-content-center">
+      <button id="answerbox" class="btn btn-primary m-4" type="submit">Submit Answer</button>
+    </div>
+  </div>
+</main>
+
+
+<!-- 	
+</head>
+<body>
+	<div>
+		<h2 id="question"></h2>
+		<div id="answers"></div>
+		
+	<script id="question-template" type="text/x-handlebars-template">
+		{{{question}}}
+	</script>
+	<script id="answer-template" type="text/x-handlebars-template">
+		<button class="answer-btn">{{{answer}}}</button>
+	</script> -->

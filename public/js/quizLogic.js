@@ -1,8 +1,7 @@
 const { Questions, Quiz } = require('./models');
-
 const questionS = document.querySelector('#question');
 const answerS = document.querySelector('#answers');
-const submitBtn = document.querySelector('#submit');
+const submitBtn = document.querySelector('#answerbox');
 let currentQuestionId = 0;
 let score = 0;
 
@@ -13,7 +12,7 @@ async function startQuiz() {
 
     // Compile the Handlebars templates
     const questionTemplate = Handlebars.compile('{{question}}');
-    const answerTemplate = Handlebars.compile('<button class="answer">{{answer}}</button>');
+    const answerTemplate = Handlebars.compile('{{answers}}');
 
     // Disimage.pngplay the first question
     displayQuestion(questions[currentQuestionId]);
@@ -26,7 +25,7 @@ async function startQuiz() {
         answerS.innerHTML = question.answers.map(answer => answerTemplate({ answer })).join('');
 
         // Add event listeners to the answer buttons
-        const answerButtons = answerS.querySelectorAll('.answer');
+        const answerButtons = answerS.querySelectorAll('#answerbox');
         answerButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const cAnswer = question.answers.find(answer => answer.isCorrect);
