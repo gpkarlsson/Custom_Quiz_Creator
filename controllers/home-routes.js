@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Questions } = require('../models');
+const { User, Questions, Quiz } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -61,6 +61,8 @@ router.get('/quiz', withAuth, async (req, res) => {
 
     res.render('quiz', {
       quiz,
+      Quiz,
+      Questions,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

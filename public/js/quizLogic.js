@@ -1,7 +1,9 @@
 const { Questions, Quiz } = require('./models');
+
 const questionS = document.querySelector('#question');
 const answerS = document.querySelector('#answers');
 const submitBtn = document.querySelector('#answerbox');
+
 let currentQuestionId = 0;
 let score = 0;
 
