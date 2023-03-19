@@ -10,10 +10,12 @@
         {{#each answers}}
         <p class="my-4 text-center"></p>
         {{/each}}
-<div id="userAnswer">
-  <form></form>
+<div class="mb-3">
+  <label for="answerbox" class="form-label">Answer</label>
+  <input type="text" class="form-control" id="answerbox" placeholder="your answer">
 </div>
-       submit button checks answer and sends user to next question 
+
+       <!-- submit button checks answer and sends user to next question -->
       <div class="d-flex justify-content-center">
         <button id="submit" class="btn btn-primary m-4" type="submit">Submit Answer</button>
       </div>
