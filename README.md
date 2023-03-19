@@ -1,20 +1,18 @@
-# QUIZ TAKER!
+# Quiz Taker
 
 ## Description
 
 A clean and easy way to take a quiz!
 
-MVP: I as a user want a simple way to take a quiz
+MVP: As a user want a simple way to take a quiz
 
-This is a simple test taker. Upgrade paths include making questions/answers and adding more categories. For the press of time, we were unable to add categories to the quiz taker. However the base code is avaliable in the files commented out.
-
-
+This is a simple quiz taker application. Future goals include adding more questions and answers, as well as adding more categories.
 
 ## Installation
 
-npm i
-npm run
-localhost:3001
+First, open the file directory containing the repository in a CLI and ensure you have Node.js installed. Next, run 
+`npm i`, seed the files using 
+`npm run seeds` and then run the application using `npm start`. The application will then be running in the browser at localhost:3001
 
 
 ## Usage
@@ -29,7 +27,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
 
 ## Credits
 
-Made by Samuel, Gordon, and Alex! Credit to BCS for training and our teachers for help setting it up!
+[Alex Hickey](https://github.com/Axelpanic), [Gordon Karlsson](https://github.com/gpkarlsson), and [Samuel Wright](https://github.com/Samwright33)
 
 
 ## License
