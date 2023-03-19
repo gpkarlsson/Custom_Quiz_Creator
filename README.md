@@ -4,7 +4,7 @@
 
 A clean and easy way to take a quiz!
 
-MVP: As a user want a simple way to take a quiz
+MVP: As a user I want a simple way to take a quiz
 
 This is a simple quiz taker application. Future goals include adding more questions and answers, as well as adding more categories.
 
