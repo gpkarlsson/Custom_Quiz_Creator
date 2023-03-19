@@ -19,11 +19,7 @@ First, open the file directory containing the repository in a CLI and ensure you
 
 Provide instructions and examples for use. Include screenshots as needed.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+![image](https://user-images.githubusercontent.com/114494147/226216787-ed22544a-0c7d-4f50-af7c-b535e41ce13b.png)
 
 ## Credits
 
