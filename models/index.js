@@ -1,4 +1,5 @@
 const User = require('./User');
+const Questions = require('./Questions');
 const Quiz = require('./Quiz');
 // const Answer = require('./Answer');
 
@@ -15,4 +16,4 @@ Quiz.belongsTo(User, {
 //   foreignKey: ''
 // })
 
-module.exports = { User, Quiz };
+module.exports = { User, Questions, Quiz };

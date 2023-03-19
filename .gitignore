@@ -64,7 +64,6 @@ Desktop.ini
 ######################
 /bin/
 /deploy/
-package.json
 package-lock.json
 
 
