@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Questions, Quiz } = require('../models');
+const { User, Questions } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -21,7 +21,7 @@ router.get('/', withAuth, async (req, res) => {
 });
 
 router.get('/Takequiz', withAuth, async (req, res) => {
-  console.log('test')
+  console.log('test');
   try {
     // const userData = await User.findAll({
     //   attributes: { exclude: ['password'] },
@@ -63,7 +63,6 @@ router.get('/quizpage', withAuth, async (req, res) => {
 
     res.render('quizpage', {
       quiz,
-      Quiz,
       Questions,
       loggedIn: req.session.loggedIn,
     });
