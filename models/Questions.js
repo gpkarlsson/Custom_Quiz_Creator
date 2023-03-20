@@ -12,7 +12,7 @@ Questions.init(
       autoIncrement: true,
     },
     question: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     answers: {
