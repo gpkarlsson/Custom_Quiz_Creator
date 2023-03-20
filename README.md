@@ -1,7 +1,7 @@
 # Quiz Taker
 ![language count badge](https://img.shields.io/github/languages/count/gpkarlsson/Custom_Quiz_Creator)
 ![top language](https://img.shields.io/github/languages/top/gpkarlsson/Custom_Quiz_Creator)
-![MIT License](https://img.shields.io/github/license/gpkarlsson/Custom_Quiz_Creator)\
+![MIT License](https://img.shields.io/github/license/gpkarlsson/Custom_Quiz_Creator)
 
 ## Description
 
