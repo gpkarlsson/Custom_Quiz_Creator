@@ -1,5 +1,3 @@
-const { Questions, Quiz } = require('./models');
-
 const quizQuestion = document.querySelector('#question');
 const quizAnswers = document.querySelector('#answers');
 const submitBtn = document.querySelector('#answerbox');
@@ -9,8 +7,7 @@ let score = 0;
 
 async function startQuiz() {
     // Retrieve the quiz data from the server
-     const quiz = await Quiz.findOne();
-     const questions = await Questions.find({ quizId: quiz._id });
+     const questions = await Questions.find({ geoquestions });
 
     // Compile the Handlebars templates
     const questionTemplate = Handlebars.compile('{{question}}');
