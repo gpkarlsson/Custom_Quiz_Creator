@@ -34,13 +34,18 @@ Quiz.init(
         key: 'id',
       },
     },
+    questions: {
+      type: DataTypes.STRING,
+      allowNull: false,
+
+    }
   },
+
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
     modelName: 'quiz',
-  }
-);
+  });
 
 module.exports = Quiz;

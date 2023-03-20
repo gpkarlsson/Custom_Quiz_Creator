@@ -1,7 +1,7 @@
 const { Questions, Quiz } = require('./models');
 
-const quizQuestion = document.querySelector('#question');
-const quizAnswers = document.querySelector('#answers');
+const questionS = document.querySelector('#question');
+const answerS = document.querySelector('#answers');
 const submitBtn = document.querySelector('#answerbox');
 
 let currentQuestionId = 0;
@@ -9,8 +9,8 @@ let score = 0;
 
 async function startQuiz() {
     // Retrieve the quiz data from the server
-    // const quiz = await Quiz.findOne();
-    // const questions = await Questions.find({ quizId: quiz._id });
+    const quiz = await Quiz.findOne();
+    const questions = await Questions.find({ quizId: quiz._id });
 
     // Compile the Handlebars templates
     const questionTemplate = Handlebars.compile('{{question}}');
@@ -21,10 +21,10 @@ async function startQuiz() {
 
     function displayQuestion(question) {
         // Render the question text using the Handlebars template
-        quizQuestion.innerHTML = questionTemplate({ question: question.text });
+        questionS.innerHTML = questionTemplate({ question: question.text });
 
         // Render the answer buttons using the Handlebars template
-        quizAnswers.innerHTML = question.answers.map(answer => answerTemplate({ answer })).join('');
+        answerS.innerHTML = question.answers.map(answer => answerTemplate({ answer })).join('');
 
         // Add event listeners to the answer buttons
         const answerButtons = answerS.querySelectorAll('#answerbox');

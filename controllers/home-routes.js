@@ -52,11 +52,9 @@ router.get('/login', (req, res) => {
 router.get('/quiz', withAuth, async (req, res) => {
   console.log('below/quiz')
   try {
-    const quizData = await Questions.findOne()
-    console.log(quizData)
-
+    const quizData = await Questions.findOne();
     if (!quizData) {
-      return res.status(400).json({ message: 'quiz not found' });
+      res.status(400).json({ message: 'quiz not found' });
     }
     const quiz = quizData.dataValues.questions
     console.log(quizData)

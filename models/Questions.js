@@ -15,12 +15,13 @@ Questions.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    quiz_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'quiz',
-        key: 'id',
-      },
+    answers: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    correctAnswer: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
