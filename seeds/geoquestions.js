@@ -26,7 +26,8 @@ const questions =
       question: "What country borders the US to the North?",
       answers: "Argentia, Canada, Mexio, or Sweden?",
       correctAnswer: "Canada"
-    }];
+    }
+  ];
 
 const seedGeoQuestions = () => Questions.bulkCreate(questions);
 
