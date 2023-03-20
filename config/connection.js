@@ -31,7 +31,7 @@ const db = mysql.createConnection(
 );
 
 // Query database
-db.query('SELECT * FROM questions', function (err, results) {
+db.query('SELECT * FROM Questions', function (err, results) {
   console.log(results);
 });
 
