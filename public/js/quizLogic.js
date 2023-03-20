@@ -9,8 +9,8 @@ let score = 0;
 
 async function startQuiz() {
     // Retrieve the quiz data from the server
-    // const quiz = await Quiz.findOne();
-    // const questions = await Questions.find({ quizId: quiz._id });
+     const quiz = await Quiz.findOne();
+     const questions = await Questions.find({ quizId: quiz._id });
 
     // Compile the Handlebars templates
     const questionTemplate = Handlebars.compile('{{question}}');

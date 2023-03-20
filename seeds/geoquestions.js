@@ -1,11 +1,5 @@
-const { Questions, Quiz, Answer } = require('../models');
+const { Questions } = require('../models');
 
-const geoQuiz = await Quiz.create({
-
-})
-
-
-//TODO keep going
 
 const questions =
   [

@@ -27,10 +27,6 @@ User.init(
       validate: {
         isEmail: true,
       },
-    institution: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
     },
     password: {
       type: DataTypes.STRING,
