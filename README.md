@@ -5,7 +5,7 @@
 
 ## Description
 
-A clean and easy way to take a quiz!
+A clean and easy way to take a quiz.
 
 MVP: As a user I want a simple way to take a quiz
 
