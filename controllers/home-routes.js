@@ -54,7 +54,7 @@ router.get('/quiz', withAuth, async (req, res) => {
   try {
     const quizData = await Questions.findOne();
     if (!quizData) {
-      res.status(400).json({ message: 'quiz not found' });
+      return res.status(400).json({ message: 'quiz not found' });
     }
     const quiz = quizData.dataValues.questions
     console.log(quizData)

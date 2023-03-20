@@ -10,6 +10,10 @@ Questions.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      references: {
+        model: 'answer',
+        key: 'question_id',
+      }
     },
     question: {
       type: DataTypes.TEXT,

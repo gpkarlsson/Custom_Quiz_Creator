@@ -9,9 +9,8 @@ const questions =
     },
     {
       question: "What is the largest state by area in the US",
-      answers: 
-        "Minnesota, Maine, Alaska, or Texas?",
-      correctAnswer: "Alaska",
+      answers: "Minnesota, Maine, Alaska, or Texas?",
+      correctAnswer: "Alaska"
     },
     {
       question: "What is the smallest state by area in the US?",

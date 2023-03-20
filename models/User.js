@@ -15,6 +15,10 @@ User.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      references: {
+        model: 'quiz',
+        key: 'user_id'
+      }
     },
     name: {
       type: DataTypes.STRING,

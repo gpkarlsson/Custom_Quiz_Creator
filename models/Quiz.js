@@ -10,6 +10,10 @@ Quiz.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
+      references: {
+        model: 'question',
+        key: 'quiz_id',
+      },
     },
     name: {
       type: DataTypes.STRING,
@@ -29,10 +33,6 @@ Quiz.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
     },
     questions: {
       type: DataTypes.STRING,
@@ -40,7 +40,6 @@ Quiz.init(
 
     }
   },
-
   {
     sequelize,
     freezeTableName: true,
