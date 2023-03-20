@@ -16,13 +16,14 @@ Questions.init(
       allowNull: false,
     },
     answers: {
+
       type: DataTypes.STRING,
       allowNull: false,
     },
     correctAnswer: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+      type:DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
     sequelize,
