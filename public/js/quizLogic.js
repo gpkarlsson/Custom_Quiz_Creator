@@ -1,5 +1,7 @@
-const quizQuestion = document.querySelector('#question');
-const quizAnswers = document.querySelector('#answers');
+const { Questions, Quiz } = require('./models');
+
+const questionS = document.querySelector('#question');
+const answerS = document.querySelector('#answers');
 const submitBtn = document.querySelector('#answerbox');
 
 let currentQuestionId = 0;
@@ -18,10 +20,10 @@ async function startQuiz() {
 
     function displayQuestion(question) {
         // Render the question text using the Handlebars template
-        quizQuestion.innerHTML = questionTemplate({ question: question.text });
+        questionS.innerHTML = questionTemplate({ question: question.text });
 
         // Render the answer buttons using the Handlebars template
-        quizAnswers.innerHTML = question.answers.map(answer => answerTemplate({ answer })).join('');
+        answerS.innerHTML = question.answers.map(answer => answerTemplate({ answer })).join('');
 
         // Add event listeners to the answer buttons
         const answerButtons = answerS.querySelectorAll('#answerbox');

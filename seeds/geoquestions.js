@@ -1,6 +1,5 @@
 const { Questions } = require('../models');
 
-
 const questions =
   [
     {
@@ -12,7 +11,8 @@ const questions =
     {
       id: 2,
       question: "What is the largest state by area in the US",
-      answers: "Minnesota, Maine, Alaska, or Texas?",
+      answers: 
+        "Minnesota, Maine, Alaska, or Texas?",
       correctAnswer: "Alaska",
     },
     {
