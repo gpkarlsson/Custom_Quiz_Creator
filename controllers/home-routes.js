@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Questions, Quiz } = require('../models');
-const seedGeoQuestions = require('../seeds/geoquestions');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -24,16 +23,15 @@ router.get('/', withAuth, async (req, res) => {
 router.get('/Takequiz', withAuth, async (req, res) => {
   console.log('test')
   try {
-     const userData = await User.findAll({
-      attributes: { exclude: ['password'] },
-      order: [['name', 'ASC']],
-     });
+    // const userData = await User.findAll({
+    //   attributes: { exclude: ['password'] },
+    //   order: [['name', 'ASC']],
+    // });
 
-    const users = userData.map((project) => project.get({ plain: true }));
-
+    // const users = userData.map((project) => project.get({ plain: true }));
     console.log(await req.session.loggedIn)
     res.render('Takequiz', {
-      users,
+      // users,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
@@ -51,19 +49,22 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/quizpage', withAuth, async (req, res) => {
+router.get('/quiz', withAuth, async (req, res) => {
   console.log('below/quiz')
   try {
-    const quizData = await geoquestions;
+    const quizData = await Questions.findOne()
+    console.log(quizData)
+
     if (!quizData) {
       return res.status(400).json({ message: 'quiz not found' });
     }
     const quiz = quizData.dataValues.questions
     console.log(quizData)
 
-    res.render('quizpage', {
+    res.render('quiz', {
       quiz,
-      quizData,
+      Quiz,
+      Questions,
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {

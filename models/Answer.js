@@ -12,9 +12,20 @@ Answer.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        rAnswer: {
+        answer: {
             type: DataTypes.STRING,
             allowNull: false,
+        },
+        isCorrect: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false
+        },
+        question_id: {
+          type: DataTypes.INTEGER,
+          references: {
+            model: 'question',
+            key: 'id',
+          },
         },
     },
     {

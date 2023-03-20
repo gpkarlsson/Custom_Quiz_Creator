@@ -11,7 +11,7 @@ const seedAll = async () => {
 
   //await seedFiller();
 
-  process.exit();
+  process.exit(0);
 };
 
 seedAll();

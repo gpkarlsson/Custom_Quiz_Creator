@@ -10,22 +10,17 @@ Questions.init(
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-      references: {
-        model: 'answer',
-        key: 'question_id',
-      }
     },
     question: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-    answers: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    correctAnswer: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    quiz_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'quiz',
+        key: 'id',
+      },
     },
   },
   {
