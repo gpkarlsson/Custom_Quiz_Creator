@@ -63,7 +63,7 @@ router.get('/quizpage', withAuth, async (req, res) => {
 
     res.render('quizpage', {
       quiz,
-      Questions,
+      
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
