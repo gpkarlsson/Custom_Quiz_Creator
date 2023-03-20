@@ -1,4 +1,7 @@
 # Quiz Taker
+![language count badge](https://img.shields.io/github/languages/count/gpkarlsson/Custom_Quiz_Creator)
+![top language](https://img.shields.io/github/languages/top/gpkarlsson/Custom_Quiz_Creator)
+![MIT License](https://img.shields.io/github/license/gpkarlsson/Custom_Quiz_Creator)\
 
 ## Description
 
@@ -17,9 +20,8 @@ First, open the file directory containing the repository in a CLI and ensure you
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-![image](https://user-images.githubusercontent.com/114494147/226216787-ed22544a-0c7d-4f50-af7c-b535e41ce13b.png)
+Create an account or log in, then click "Let's Get Started" button, then
+![image](https://user-images.githubusercontent.com/114494147/226247409-732fb2f4-f56f-4a50-970f-ac6a8d31f71d.png)
 
 ## Credits
 
