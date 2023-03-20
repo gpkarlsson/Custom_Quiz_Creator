@@ -49,7 +49,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/quiz', withAuth, async (req, res) => {
+router.get('/quizpage', withAuth, async (req, res) => {
   console.log('below/quiz')
   try {
     const quizData = await Questions.findOne()
@@ -61,7 +61,7 @@ router.get('/quiz', withAuth, async (req, res) => {
     const quiz = quizData.dataValues.questions
     console.log(quizData)
 
-    res.render('quiz', {
+    res.render('quizpage', {
       quiz,
       Quiz,
       Questions,
