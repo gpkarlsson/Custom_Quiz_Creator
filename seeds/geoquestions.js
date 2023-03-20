@@ -1,11 +1,4 @@
-const { Questions, Quiz, Answer } = require('../models');
-
-const geoQuiz = await Quiz.create({
-
-})
-
-
-//TODO keep going
+const { Questions } = require('../models');
 
 const questions =
   [
@@ -16,7 +9,8 @@ const questions =
     },
     {
       question: "What is the largest state by area in the US",
-      answers: "Minnesota, Maine, Alaska, or Texas?",
+      answers: 
+        "Minnesota, Maine, Alaska, or Texas?",
       correctAnswer: "Alaska",
     },
     {
