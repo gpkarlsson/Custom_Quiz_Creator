@@ -49,6 +49,8 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//Add fetch here for question data and fix. This path pulls server data to the front end for use by quizpage.Handlebars/quizlogic.js
+
 router.get('/quizpage', withAuth, async (req, res) => {
   console.log('below/quiz')
   try {
@@ -61,7 +63,6 @@ router.get('/quizpage', withAuth, async (req, res) => {
 
     res.render('quizpage', {
       quiz,
-      
       loggedIn: req.session.loggedIn,
     });
   } catch (err) {
