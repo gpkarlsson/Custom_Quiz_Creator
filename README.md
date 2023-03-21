@@ -21,6 +21,8 @@ Provide instructions and examples for use. Include screenshots as needed.
 
 ![image](https://user-images.githubusercontent.com/114494147/226216787-ed22544a-0c7d-4f50-af7c-b535e41ce13b.png)
 
+Deployed Link: https://quiz-app-bcp2.herokuapp.com/
+
 ## Credits
 
 [Alex Hickey](https://github.com/Axelpanic), [Gordon Karlsson](https://github.com/gpkarlsson), and [Samuel Wright](https://github.com/Samwright33)
