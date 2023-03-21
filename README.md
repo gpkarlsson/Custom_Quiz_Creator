@@ -20,7 +20,7 @@ First, open the file directory containing the repository in a CLI and ensure you
 
 ## Usage
 
-Create an account or log in, then click "Let's Get Started" button, then
+Create an account or log in, then click "Let's Get Started" button, then click the "Take a Quiz" button
 ![image](https://user-images.githubusercontent.com/114494147/226247409-732fb2f4-f56f-4a50-970f-ac6a8d31f71d.png)
 
 Deployed Link: https://quiz-app-bcp2.herokuapp.com/
