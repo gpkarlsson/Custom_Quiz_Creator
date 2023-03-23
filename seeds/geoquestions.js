@@ -12,7 +12,7 @@ const questions =
       id: 2,
       question: "What is the largest state by area in the US",
       answers: "Minnesota, Maine, Alaska, or Texas?",
-      correctAnswer: "Alaska",
+      correctAnswer: "Alaska"
     },
     {
       id: 3,
