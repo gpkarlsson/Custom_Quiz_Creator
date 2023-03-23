@@ -14,13 +14,11 @@
     right: 10px;
 }
 
-#highscores,
 #hs-buttons
 {
     display: flex;
     justify-content: center;
-    border-radius: 10px;
-    box-shadow: 10px 5px 5px gray;
+    margin: 5px;
 }
 
 .option-button {
@@ -30,7 +28,11 @@
 
 #leaderboard-card,
 #submit-button,
-#score-card
+#score-card,
+#start-button,
+#start-card,
+#clear-button,
+#back-button
 {
     border-radius: 10px;
 }
