@@ -52,21 +52,19 @@ router.get('/login', (req, res) => {
 router.get('/quizpage', withAuth, async (req, res) => {
   console.log('below/quiz')
   try {
-    const quizData = await Questions.findOne();
+    const quizData = await Questions.findAll();
+    const quizQuestions = quizData.get({ plain: true });
+    console.log(quizData);
+    res.render('quizpage', {
+      quizQuestions,
+      loggedIn: req.session.loggedIn,
+    });
     if (!quizData) {
       res.status(400).json({ message: 'quiz not found' });
     }
-    const quiz = quizData.dataValues.questions
-    console.log(quizData)
-
-    res.render('quizpage', {
-      quiz,
-      
-      loggedIn: req.session.loggedIn,
-    });
   } catch (err) {
-      console.log('here error')
-      res.status(500).json(err);
+    console.log('here error')
+    res.status(500).json(err);
   }
 });
 
