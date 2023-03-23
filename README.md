@@ -9,7 +9,7 @@ A clean and easy way to take a quiz.
 
 MVP: As a user I want a simple way to take a quiz
 
-This is a simple quiz taker application. Future goals include adding more questions and answers, as well as adding more categories.
+This is a simple quiz taker application. Future goals include implementing functionality to allow custom question creation, adding more premade questions and answers, as well as adding more quiz categories.
 
 ## Installation
 
@@ -32,4 +32,4 @@ Deployed Link: https://quiz-app-bcp2.herokuapp.com/
 
 ## License
 
-MIT CC see license file for additional.
+MIT License
