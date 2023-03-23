@@ -52,8 +52,11 @@ router.get('/login', (req, res) => {
 router.get('/quizpage', withAuth, async (req, res) => {
   console.log('below/quiz')
   try {
-    const quizData = await Questions.findAll();
-    const quizQuestions = quizData.get({ plain: true });
+    const quizData = await Questions.findAll({
+      attibutes: ['id', 'question', 'answers', 'correctAnswer']
+    });
+    // const users = userData.map((project) => project.get({ plain: true }));
+    const quizQuestions = quizData.map((project) => project.get({ plain: true }));
     console.log(quizData);
     res.render('quizpage', {
       quizQuestions,
