@@ -18,21 +18,21 @@ if (process.env.JAWSDB_URL) {
     }
   );
 }
-const db = mysql.createConnection(
-  {
-    host: 'localhost',
-    // MySQL username,
-    user: 'root',
-    // MySQL password
-    password: 'Debbie08',
-    database: 'quiz_db'
-  },
-  console.log(`Connected to the quiz_db database.`)
-);
+// const db = mysql.createConnection(
+//   {
+//     host: 'localhost',
+//     // MySQL username,
+//     user: 'root',
+//     // MySQL password
+//     password: 'Debbie08',
+//     database: 'quiz_db'
+//   },
+//   console.log(`Connected to the quiz_db database.`)
+// );
 
-// Query database
-db.query('SELECT * FROM Questions', function (err, results) {
-  console.log(results);
-});
+// // Query database
+// db.query('SELECT * FROM Questions', function (err, results) {
+//   console.log(results);
+// });
 
 module.exports = sequelize;
